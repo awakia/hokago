@@ -1,6 +1,6 @@
 import com.shigeodayo.ardrone.processing.*;
 /*FullScreeeen*/
-//import fullscreen.*; 
+//import fullscreen.*;
 //FullScreen fs;
 ARDroneForP5 ardrone;
 
@@ -10,7 +10,7 @@ void setup() {
   PFont cfont = createFont("serif", 10);
   textFont(cfont);
   /*FullScreeeen*/
-  //fs = new FullScreen(this); 
+  //fs = new FullScreen(this);
   //fs.enter();
   ardrone=new ARDroneForP5("192.168.1.1");
   // connect to the AR.Drone
@@ -24,7 +24,7 @@ void setup() {
 }
 
 void draw() {
-  background(204);  
+  background(204);
   sysEngage();
   // getting image from AR.Drone
   // true: resizeing image automatically
@@ -43,34 +43,34 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == UP) {
       ardrone.forward(); // go forward
-    } 
+    }
     else if (keyCode == DOWN) {
       ardrone.backward(); // go backward
-    } 
+    }
     else if (keyCode == LEFT) {
       ardrone.goLeft(); // go left
-    } 
+    }
     else if (keyCode == RIGHT) {
       ardrone.goRight(); // go right
-    } 
+    }
     else if (keyCode == SHIFT) {
       ardrone.takeOff(); // take off, AR.Drone cannot move while landing
-    } 
+    }
     else if (keyCode == CONTROL) {
       ardrone.landing();
       // landing
     }
-  } 
+  }
   else {
     if (key == 's') {
       ardrone.stop(); // hovering
-    } 
+    }
     else if (key == 'r') {
       ardrone.spinRight(); // spin right
-    } 
+    }
     else if (key == 'l') {
       ardrone.spinLeft(); // spin left
-    } 
+    }
     else if (key == 'u') {
       ardrone.up(); // go up
     }
@@ -100,7 +100,7 @@ void sysEngage(){
   rect(320, 150, 640, 100);
   fill(255, 255, 255);
   textSize(60);
-  text("System Engage", 440, 220);  
+  text("System Engage", 440, 220);
 }
 
 void showData(){
