@@ -114,9 +114,9 @@ void showData(){
   float[] velocity = ardrone.getVelocity();
   int battery = ardrone.getBatteryPercentage();
   textSize(40);
-  String attitude = "PITCH:\t" + pitch + "\n\nROLL:\t" + roll + "\n\nYAW:\t" + yaw + "\n\nALTITUDE:\t" + altitude;
+  String attitude = "PITCH:\t" + pitch + "\nROLL:\t" + roll + "\nYAW:\t" + yaw + "\nALTITUDE:\t" + altitude;
   text(attitude, 20, 200);
-  String vel = "VX:" + velocity[0] + "\n\nVY:" + velocity[1];
+  String vel = "VX:" + velocity[0] + "\nVY:" + velocity[1];
   text(vel, 20, 500);
   String bat = "BATTERY:" + battery + " %";
   text(bat, 20, 900);
